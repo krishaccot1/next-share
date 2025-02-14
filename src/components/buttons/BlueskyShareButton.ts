@@ -4,14 +4,13 @@ import createShareButton from '../../hocs/createShareButton';
 function blueskyLink(
   url: string,
   {
-    title,    
-    hashtags = [],
-  }: { title?: string;hashtags?: string[]; },
+    title,
+  }: { title?: string; },
 ) {
   return (
     'https://bsky.app/intent/compose' +
     transformObjectToParams({
-      text: `${title}${hashtags.length > 0 ? ` #${hashtags.join('#')}` : ''} ${url}`,
+      text: `${title} ${url}`,
     })
   );
 }
