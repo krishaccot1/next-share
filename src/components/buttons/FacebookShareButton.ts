@@ -6,7 +6,7 @@ function facebookLink(
   { quote, hashtag }: { quote?: string; hashtag?: string },
 ) {
   return (
-    'https://www.facebook.com/sharer/sharer.php' +
+    'https://facebook.com/sharer/sharer.php' +
     transformObjectToParams({
       u: url,
       quote,
